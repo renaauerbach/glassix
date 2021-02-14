@@ -35,7 +35,6 @@ export default class Map extends React.Component {
 
 		src += city + country + '&zoom=13';
 
-		console.log(this.state.data);
 		console.log('City: ', city);
 		console.log('Country: ', country);
 
