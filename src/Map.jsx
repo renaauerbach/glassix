@@ -28,17 +28,17 @@ export default class Map extends React.Component {
 	}
 
 	render() {
+		let city = this.state.data.city + ',';
+		let country = this.state.data.country_name;
 		let src =
 			'https://www.google.com/maps/embed/v1/place?key=AIzaSyCdQymwSuF0P6Ee-ffX0ZtWjpJdpaT5eLk&q=';
 
-		src += this.state.data.city;
-		src +=
-			'&center=' +
-			this.state.data.latitude +
-			',' +
-			this.state.data.longitude;
+		src += city + country + '&zoom=13';
 
 		console.log(this.state.data);
+		console.log('City: ', city);
+		console.log('Country: ', country);
+
 		return (
 			<iframe
 				className='map'
